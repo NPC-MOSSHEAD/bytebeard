@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 640" fill="none">
+<defs>
+ <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.24" numOctaves="2" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2"/></filter>
+ <linearGradient id="jacket" x1="200" y1="290" x2="540" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#55534e"/><stop offset=".5" stop-color="#252827"/><stop offset="1" stop-color="#111313"/></linearGradient>
+ <linearGradient id="skin" x1="380" y1="204" x2="462" y2="365" gradientUnits="userSpaceOnUse"><stop stop-color="#c7c2b6"/><stop offset=".54" stop-color="#8c8a84"/><stop offset="1" stop-color="#5c5a56"/></linearGradient>
+ <linearGradient id="laptop" x1="165" y1="430" x2="500" y2="612" gradientUnits="userSpaceOnUse"><stop stop-color="#b1b1aa"/><stop offset="1" stop-color="#646660"/></linearGradient>
+ <pattern id="dots" patternUnits="userSpaceOnUse" width="10" height="10"><circle cx="1" cy="1" r="1" fill="#fff" opacity=".08"/></pattern>
+</defs>
+<!-- offset red screenprint shadow -->
+<path fill="#b92d20" opacity=".95" d="M140 592c1-93 36-167 78-198 26-19 61-26 98-30l9-41c-17-24-32-46-30-81 1-62 42-112 111-112 68 0 105 41 101 112-3 48-22 72-46 96l13 27c72 14 113 47 143 102l25 126-502-1Z" transform="translate(18 15)"/>
+<!-- boots/legs -->
+<path d="M186 509c-10 48-11 88-14 121h201l-15-107-172-14Z" fill="#3c3d38" stroke="#242622" stroke-width="5"/>
+<path d="M355 518c5 42 17 76 40 112h178l-11-76-207-36Z" fill="#494a45" stroke="#292c29" stroke-width="5"/>
+<!-- silhouette shirt & open jacket -->
+<path d="M249 375c-67 20-91 92-120 171l34 84h358l90-47c-10-86-38-161-114-192l-72-30-117-3-59 17Z" fill="url(#jacket)" stroke="#2e312d" stroke-width="8"/>
+<path d="m318 359 91 5 37 21-1 205-124-4-29-167 26-60Z" fill="#e4e0d5"/>
+<path d="M272 383c11 55 18 121 24 205h51l-24-203-51-2ZM465 376c-3 44-12 129-19 210h-44l41-198 22-12Z" fill="#696d67"/>
+<path d="M247 376c-39 19-61 60-76 100l25 73 100 19-12-127-37-65Z" fill="#3b3d3a"/>
+<path d="M458 365c42 10 78 37 100 85l36 86-66 41-91-90 21-122Z" fill="#40423f"/>
+<!-- collar -->
+<path d="m294 354 44-22 41 40-39 69-46-87Z" fill="#393e3a" stroke="#202521" stroke-width="5"/>
+<path d="m459 352-43-20-37 40 52 56 28-76Z" fill="#2d302e" stroke="#202521" stroke-width="5"/>
+<!-- neck -->
+<path d="m345 305-9 54 48 31 55-30-24-81-70 26Z" fill="url(#skin)" stroke="#555852" stroke-width="4"/>
+<!-- ear -->
+<path d="M460 254c24-13 31 18 15 43-9 14-21 15-28 9l13-52Z" fill="#7b7c75" stroke="#424742" stroke-width="5"/>
+<!-- face -->
+<path d="M341 185c-26 21-29 65-13 110 13 40 43 76 77 77 42 2 72-48 78-96 7-56-15-101-75-109-28-3-50 4-67 18Z" fill="url(#skin)" stroke="#333832" stroke-width="6"/>
+<path d="m423 252 14 42-22 7" stroke="#4b4f4b" stroke-width="5" stroke-linecap="round"/>
+<path d="M372 328c17 6 37 7 55-4" stroke="#494a45" stroke-width="6" stroke-linecap="round"/>
+<path d="M342 236c-17 5-24 15-27 22l8 22 18-2v-42Z" fill="#494d48"/>
+<!-- sunglasses -->
+<path d="M332 247c29-10 53-11 71-2l-3 26c-6 17-46 18-57-1l-11-23ZM412 244c25-7 49-4 61 4l-2 21c-7 16-45 21-58-1l-1-24Z" fill="#181c1d" stroke="#3c403c" stroke-width="7"/>
+<path d="m400 252 15-2M333 244l-20 6" stroke="#373936" stroke-width="7"/>
+<path d="m347 255 25-6M422 254l20-5" stroke="#c0c4bd" stroke-width="2" opacity=".38"/>
+<!-- hat backwards -->
+<path d="M316 227c-10-29-4-63 27-89 25-21 87-27 123 2 17 14 25 32 27 51l-9 41-31-10c-39-13-92-12-137 5Z" fill="#292c2a" stroke="#4f5350" stroke-width="6"/>
+<path d="M324 195c43-15 102-16 159 4l-2 31-164-7 7-28Z" fill="#333735" stroke="#181c1b" stroke-width="5"/>
+<path d="M331 183c-32-8-45-13-65-4-13 6-23 22-26 37 37-8 75-7 92-14l-1-19Z" fill="#272a28" stroke="#4b4d49" stroke-width="4"/>
+<circle cx="420" cy="157" r="4" fill="#d0cbbd"/><circle cx="386" cy="170" r="3" fill="#d0cbbd"/><circle cx="354" cy="182" r="3" fill="#d0cbbd"/>
+<!-- arms/hands and laptop -->
+<path d="M177 459c-17 45-32 98-17 117 19 24 81 10 128-3l-14-67-97-47Z" fill="#51544e" stroke="#2f302d" stroke-width="7"/>
+<path d="M496 457c-6 30-11 64-10 93 5 34 21 43 47 31l36-23-26-66-47-35Z" fill="#494c48" stroke="#292d2c" stroke-width="7"/>
+<path d="M491 550c18-1 35 9 39 26-20 13-42 20-60 13l21-39Z" fill="#a3a299" stroke="#5a5d56" stroke-width="4"/>
+<!-- laptop screen -->
+<path d="M168 437h292c11 0 19 7 21 18l28 151H197l-43-147c-3-12 2-22 14-22Z" fill="url(#laptop)" stroke="#4b504d" stroke-width="7"/>
+<path d="M181 452h270l27 139H219l-38-139Z" fill="#aaaca6" opacity=".58"/>
+<circle cx="332" cy="521" r="18" fill="#777b75" opacity=".46"/><path d="m323 529 17-17m-17 0 17 17" stroke="#9fa19a" stroke-width="4" opacity=".7"/>
+<path d="M181 605h347l-13 22H177l4-22Z" fill="#797e78" stroke="#444945" stroke-width="5"/>
+<path d="M129 627h482" stroke="#1c2321" stroke-width="7"/>
+<!-- print texture -->
+<path fill="url(#dots)" opacity=".68" d="M125 128h505v500H125z"/>
+</svg>

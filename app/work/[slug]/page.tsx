@@ -1,0 +1,10 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { getProject, projects } from "@/content/projects";
+import ProjectArt from "@/components/ProjectArt";
+import Starburst from "@/components/Starburst";
+type Props = { params: Promise<{ slug: string }> };
+export function generateStaticParams() { return projects.map(({ slug }) => ({ slug })); }
+export async function generateMetadata({ params }: Props): Promise<Metadata> { const { slug } = await params; const project = getProject(slug); return { title: project?.title || "Not found", description: project?.overview }; }
+export default async function ProjectPage({ params }: Props) { const { slug } = await params; const project = getProject(slug); if(!project) notFound(); const next = projects[(projects.findIndex(p => p.slug === slug)+1)%projects.length]; return <main className="case-page paper-section"><div className="page-eyebrow"><Link href="/work">← ALL PROJECTS</Link><span>PROJECT {project.number} / 04</span></div><section className="case-hero"><div className="case-title"><span className="eyebrow">{project.category}</span><h1>{project.title}<span>.</span></h1><div className="case-title-bottom"><p>{project.strap}</p><span>{project.year}</span></div></div><div className="case-visual"><ProjectArt project={project} large/></div></section><section className="case-info"><div><span className="eyebrow">/ THE STORY</span><h2 className="hand-title">The <em>idea.</em></h2></div><div><p>{project.overview}</p><p>{project.note}</p><div className="case-stack"><span>THINGS INVOLVED</span><div>{project.stack.map(x => <span key={x}>{x}</span>)}</div></div>{project.external ? <a className="pill-link" href={project.external} target="_blank" rel="noopener noreferrer">OPEN LIVE PROJECT <span>↗</span></a> : <Link className="pill-link" href="/playground">VISIT THE PLAYGROUND <span>↗</span></Link>}</div></section><Link className="next-case" href={`/work/${next.slug}`}><span>UP NEXT / KEEP EXPLORING</span><strong>{next.title}</strong><Starburst className="star"/><span className="next-case-arrow">↗</span></Link></main>; }

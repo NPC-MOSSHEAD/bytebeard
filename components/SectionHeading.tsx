@@ -1,0 +1,1 @@
+export default function SectionHeading({ index, kicker, title }: { index: string; kicker: string; title: string }) { return <div className="section-heading"><div className="section-heading-index">{index}<span>/ 05</span></div><span className="eyebrow">{kicker}</span><h2>{title}</h2></div>; }

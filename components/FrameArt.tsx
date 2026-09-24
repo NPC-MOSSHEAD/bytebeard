@@ -1,13 +1,25 @@
+import Image from "next/image";
 import type { Frame } from "@/content/frames";
-export default function FrameArt({ frame }: { frame: Frame }) {
- return <div className={`frame-art frame-${frame.illustration}`}>
-  {frame.src ? /* eslint-disable-next-line @next/next/no-img-element */ <img src={frame.src} alt={frame.name} loading="lazy"/> : <>
-   <span className="art-grain" aria-hidden="true"/>
-   {frame.illustration === "sky" && <><span className="sky-sun"/><span className="sky-cloud one"/><span className="sky-cloud two"/><span className="sky-cloud three"/><span className="sky-wire"/></>}
-   {frame.illustration === "walk" && <><span className="walk-sun"/><span className="walk-road"/><span className="walk-building one"/><span className="walk-building two"/><span className="walk-wire"/></>}
-   {frame.illustration === "flower" && <><span className="flower-stem"/><span className="flower-head"><i/><i/><i/><i/><i/><i/><i/><i/></span><span className="flower-small"/></>}
-   {frame.illustration === "glow" && <><span className="glow-disc"/><span className="glow-arch one"/><span className="glow-arch two"/><span className="glow-ground"/></>}
-  </>}
-  {!frame.src && <span className="art-label">ILLUSTRATED PLACEHOLDER</span>}
- </div>;
+
+/** The gallery always uses bytebeard's real photos, never illustration stand-ins. */
+export default function FrameArt({
+  frame,
+  priority = false,
+}: {
+  frame: Frame;
+  priority?: boolean;
+}) {
+  return (
+    <div className={`frame-art frame-photo frame-${frame.orientation}`}>
+      <Image
+        src={frame.src}
+        alt={frame.alt}
+        width={frame.width}
+        height={frame.height}
+        priority={priority}
+        sizes="(max-width: 700px) 85vw, (max-width: 1100px) 44vw, 46vw"
+        className="frame-photo-image"
+      />
+    </div>
+  );
 }
